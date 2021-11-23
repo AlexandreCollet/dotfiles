@@ -1,0 +1,43 @@
+[bar/default]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 25
+radius = 0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = ${colors.transparent}
+
+border-size = 0
+border-color = ${colors.transparent}
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 2
+module-margin-right = 0
+
+font-0 = DejaVuSans Mono:size=10
+font-1 = Font Awesome 5 Free Solid:size=9
+font-2 = Font Awesome 5 Brands:size=9
+
+modules-left = i3
+modules-center = spotify_song spotify_previous spotify_playpause spotify_next
+modules-right = volume_alsa backlight battery date powermenu
+
+tray-position = none
+tray-padding = 1
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+enable-ipc = true
+
+[bar/default_x2]
+inherit = bar/default
+height = 50
+dpi-x = 192
+dpi-y = 192

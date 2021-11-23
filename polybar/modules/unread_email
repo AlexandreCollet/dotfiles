@@ -1,0 +1,5 @@
+[module/unread_email]
+type = custom/script
+interval = 60
+exec = python3 ~/dotfiles/polybar/scripts/unread_email.py 2> /tmp/err_unread_email.txt
+click-left = thunderbird &

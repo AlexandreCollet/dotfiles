@@ -1,0 +1,19 @@
+[module/volume_pulse]
+type = internal/pulseaudio
+
+label-volume =  %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted =  0%
+label-muted-foreground = ${root.foreground}
+
+
+[module/volume_alsa]
+type = internal/alsa
+mapped = true
+
+label-volume =  %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted =  0%
+label-muted-foreground = ${root.foreground}

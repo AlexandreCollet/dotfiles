@@ -1,0 +1,14 @@
+#Configuration example for email accounts
+
+[DEFAULT]
+icon=
+colorDefault=fff
+colorUnread=3b84c0
+
+[my-email@domain.com]
+protocol=IMAP
+host=imap.domain.com
+port=993
+useSSL=true
+login=my-email
+password=my-password

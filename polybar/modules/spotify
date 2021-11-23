@@ -1,0 +1,28 @@
+[module/spotify_song]
+type = custom/script
+interval = 1
+exec-if = "pgrep spotify"
+exec = playerctl --player="spotify" metadata --format "{{ artist }}: {{ title }}"
+click-left = i3-msg '[class="Spotify"] focus'
+
+
+[module/spotify_previous]
+type = custom/script
+interval = 1
+exec-if = "pgrep spotify"
+exec = echo ""
+click-left = playerctl --player="spotify" previous
+
+[module/spotify_next]
+type = custom/script
+interval = 1
+exec-if = "pgrep spotify"
+exec = echo ""
+click-left = playerctl --player="spotify" next
+
+[module/spotify_playpause]
+type = custom/script
+interval = 1
+exec-if = "pgrep spotify"
+exec = playerctl --player="spotify" status | grep -q "Playing" && echo "" || echo ""
+click-left = playerctl --player="spotify" play-pause

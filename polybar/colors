@@ -1,0 +1,11 @@
+[colors]
+transparent = #00000000
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+
+primary = ${xrdb:color12}
+
+success = ${xrdb:color2}
+warning = ${xrdb:color3}
+alert = ${xrdb:color1}
+

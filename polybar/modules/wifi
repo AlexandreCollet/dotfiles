@@ -1,0 +1,24 @@
+[module/wifi]
+type = internal/network
+interface = wlp2s0
+interval = 3.0
+ping-interval = 3
+
+format-connected = <label-connected>
+label-connected =  %essid%
+ramp-signal-0 = 😱
+ramp-signal-1 = 😠
+ramp-signal-2 = 😒
+ramp-signal-3 = 😊
+ramp-signal-4 = 😃
+ramp-signal-5 = 😈
+
+format-disconnected = not connected
+
+format-packetloss = <animation-packetloss>
+animation-packetloss-0 = ⚠
+animation-packetloss-1 = 📶
+animation-packetloss-framerate = 500
+
+
+
