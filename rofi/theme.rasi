@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    font: "DejaVuSans Mono 12";
+}
+
+
+listview {
+    spacing: 0;
+    scrollbar: true;
+    margin: 0;
+    dynamic: true;
+    background-color: #000000;
+    columns: 4;
+}
+
+window {
+    fullscreen: true;
+    transparency: "real";
+    background-color: #000000;
+}
+
+mainbox {
+    margin: 10% 10% 10% 10%;
+    border: 0;
+    padding: 0;
+    background-color: #000000;
+    children: [mode-switcher, inputbar, listview];
+}
+
+mode-switcher {
+    background-color: #000000;
+}
+
+button {
+    background-color: #000000;
+    text-color: #ffffff;
+    padding: 4;
+}
+
+button selected {
+    background-color: #ffffff;
+    text-color: #000000;
+}
+
+element {
+    padding: 16;
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element-text {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element.selected.normal {
+    text-color: #ffffff;
+    border-radius: 0px;
+    border: 2px;
+    border-color: #ffffff;
+}
+
+
+inputbar {
+    border: 0;
+    padding: 0;
+    margin: 0 0 10% 0;
+    spacing: 0;
+    orientation: vertical;
+    background-color: #000000;
+    children: [ entry ];
+}
+
+entry {
+    padding: 8;
+    horizontal-align: 0.5;
+    border: 2px;
+    border-color: #ffffff;
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+scrollbar {
+    border: 0;
+    width: 0px;
+    handle-color: #000000;
+    handle-width: 0px;
+    background-color: #000000;
+}
