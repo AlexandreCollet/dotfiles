@@ -1,0 +1,43 @@
+
+          _---~~(~~-_.
+        _{        )   )
+      ,   ) -~~- ( ,-' )_
+     (  `-,_..`., )-- '_,)
+    ( ` _)  (  -~( -_ `,  }  ██████╗██╗  ██╗███████╗ █████╗ ████████╗███████╗██╗  ██╗███████╗███████╗████████╗
+    (_-  _  ~_-~~~~`,  ,' ) ██╔════╝██║  ██║██╔════╝██╔══██╗╚══██╔══╝██╔════╝██║  ██║██╔════╝██╔════╝╚══██╔══╝
+      `~ -^(    __;-,((())) ██║     ███████║█████╗  ███████║   ██║   ███████╗███████║█████╗  █████╗     ██║
+            ~~~~ {_ -_(())  ██║     ██╔══██║██╔══╝  ██╔══██║   ██║   ╚════██║██╔══██║██╔══╝  ██╔══╝     ██║
+                   `\  }    ╚██████╗██║  ██║███████╗██║  ██║   ██║   ███████║██║  ██║███████╗███████╗   ██║
+                     { }     ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝   ╚═╝
+
+    ---- I3 -------------------------------------------------------------------------------------------------
+    * Start a Terminal                                                                            Super+Space
+    * Open an application                                                                              Square
+    * Focused window: Switch                                                                    Super+[Arrow]
+    * Focused window: Move                                                                Super+Shift+[Arrow]
+    * Focused window: Fullscreen                                                                      Super+f
+    * Focused window: Switch tilling | floating                                                 Super+Shift+f
+    * Focused window: Split mode                                                                  Super+[v|h]
+    * Focused window: Kill                                                                       Super+Escape
+    * Focused window: Move to workspace                                                 Super+Shift+[1|...|5]
+    * Workspace: Prev & Next                                                          Super+Ctrl+[Left|Right]
+    * Workspace: Switch                                                                  Super+Ctrl+[1|...|5]
+    * Mode: Switch to "resize" mode                                                                   Super+r
+    * Mode: Switch to "workspace" mode                                                                Super+w
+    * Mode: Quit                                                                                Escape|Return
+    * Reload I3 configuration                                                                   Super+Shift+c
+    * Restart I3                                                                                Super+Shift+r
+
+    ---- I3 Mode "resize" -----------------------------------------------------------------------------------
+    * Focused Window: Grow horizontal                                                                   Right
+    * Focused Window: Shrink horizontal                                                                  Left
+    * Focused Window: Grow vertical                                                                      Down
+    * Focused Window: Shrink vertical                                                                     Up
+    * Quit                                                                                      Escape|Return
+
+    ---- I3 Mode "workspace" --------------------------------------------------------------------------------
+    * Focused Workspace: Move to output on left                                                          Left
+    * Focused Workspace: Move to output on right                                                        Right
+    * Focused Workspace: Move to output on top                                                             Up
+    * Focused Workspace: Move to output on bottom                                                        Down
+    * Quit                                                                                      Escape|Return
