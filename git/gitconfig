@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+
+[core]
+	editor = vim
+
+[user]
+	name = Alexandre Collet
+	email = 3273308+AlexandreCollet@users.noreply.github.com
+
+[init]
+	defaultBranch = main
