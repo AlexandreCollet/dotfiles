@@ -1,5 +1,7 @@
 #!/bin/sh
 
+mkdir -p $HOME/.config/
+
 # x11
 ln -sfn $PWD/x11/xresources $HOME/.Xresources
 #sudo ln -sfn $PWD/x11/xorg/* /etc/X11/xorg.conf.d/
@@ -22,5 +24,6 @@ ln -sfn $PWD/zsh/zshrc $HOME/.zshrc
 ln -sfn $PWD/autorandr $HOME/.config/
 
 # Code
+mkdir -p $HOME/.config/Code/User
 ln -sfn $PWD/code/* $HOME/.config/Code/User/
 ln -sfn $PWD/git/gitconfig $HOME/.gitconfig
