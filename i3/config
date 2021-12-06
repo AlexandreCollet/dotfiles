@@ -167,9 +167,9 @@ bindsym $mod+r mode "resize"
 bindsym $mod+w mode "workspace"
 
 # Media keys
-bindcode 121 exec amixer -M set Master 1+ toggle
-bindcode 122 exec amixer -M set Master 1%-
-bindcode 123 exec amixer -M set Master 1%+
+bindcode 121 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindcode 122 exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindcode 123 exec pactl set-sink-volume @DEFAULT_SINK@ +1%
 bindcode 172 exec playerctl play-pause
 bindcode 171 exec playerctl next
 bindcode 173 exec playerctl previous
