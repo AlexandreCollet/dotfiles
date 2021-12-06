@@ -1,5 +1,6 @@
 [module/volume_pulse]
 type = internal/pulseaudio
+interval = 1
 
 label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
@@ -11,6 +12,7 @@ label-muted-foreground = ${root.foreground}
 [module/volume_alsa]
 type = internal/alsa
 mapped = true
+interval = 1
 
 label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
