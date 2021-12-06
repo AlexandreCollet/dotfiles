@@ -4,7 +4,6 @@ mkdir -p $HOME/.config/
 
 # x11
 ln -sfn $PWD/x11/xresources $HOME/.Xresources
-#sudo ln -sfn $PWD/x11/xorg/* /etc/X11/xorg.conf.d/
 
 # I3
 ln -sfn $PWD/i3/ $HOME/.config/
