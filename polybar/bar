@@ -14,25 +14,27 @@ line-color = ${colors.transparent}
 border-size = 0
 border-color = ${colors.transparent}
 
-padding-left = 1
-padding-right = 1
+padding-left = 0
+padding-right = 0
 
-module-margin-left = 2
+module-margin-left = 0
 module-margin-right = 0
 
 font-0 = DejaVuSans Mono:size=10
-font-1 = Font Awesome 5 Free Solid:size=9
-font-2 = Font Awesome 5 Brands:size=9
+font-1 = Font Awesome 5 Free Solid:size=10;-1
+font-2 = Font Awesome 5 Brands:size=10;-1
 
-modules-left = i3
-modules-center = spotify_song spotify_previous spotify_playpause spotify_next
-modules-right = volume_pulse nightmode backlight battery date powermenu
+modules-left = rofi separator-i3 i3
+modules-center = spotify_song separator-spotify spotify_previous separator-blank2 spotify_playpause separator-blank2 spotify_next
+modules-right = nightmode separator backlight separator volume_pulse separator battery separator date separator powermenu
 
 tray-position = none
 tray-padding = 1
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
+
+cursor-click = pointer
 
 enable-ipc = true
 
