@@ -72,6 +72,7 @@ font pango:monospace 8
 
 assign [class="firefox"] $ws_web
 assign [class="Chromium"] $ws_web
+assign [class="Google-chrome"] $ws_web
 assign [class="Sublime_text"] $ws_code
 assign [class="Code"] $ws_code
 assign [class="code-oss"] $ws_code
