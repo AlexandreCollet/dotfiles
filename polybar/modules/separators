@@ -1,0 +1,17 @@
+[module/separator]
+type = custom/text
+content = "  •  "
+
+[module/separator-blank2]
+type = custom/text
+content = "  "
+
+[module/separator-i3]
+type = custom/text
+content = "  • "
+
+[module/separator-spotify]
+type = custom/script
+interval = 1
+exec-if = "pgrep spotify"
+exec = echo "  •  "

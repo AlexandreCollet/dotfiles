@@ -32,6 +32,7 @@ include-file = ~/dotfiles/polybar/modules/i3
 include-file = ~/dotfiles/polybar/modules/nightmode
 include-file = ~/dotfiles/polybar/modules/powermenu
 include-file = ~/dotfiles/polybar/modules/rofi
+include-file = ~/dotfiles/polybar/modules/separators
 include-file = ~/dotfiles/polybar/modules/spotify
 include-file = ~/dotfiles/polybar/modules/unread_email
 include-file = ~/dotfiles/polybar/modules/volume
