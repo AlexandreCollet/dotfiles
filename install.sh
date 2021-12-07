@@ -13,6 +13,7 @@ ln -sfn $PWD/polybar/ $HOME/.config/
 
 # Rofi
 mkdir -p $HOME/.local/share/applications/
+ln -sfn $PWD/rofi $HOME/.config/
 ln -sfn $PWD/rofi/applications/* $HOME/.local/share/applications/
 
 # Terminal

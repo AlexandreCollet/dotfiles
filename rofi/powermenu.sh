@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-theme="$HOME/dotfiles/rofi/theme.rasi"
-
-rofi_command="rofi -theme $dir/$theme"
-
 # Options
 shutdown="Shutdown"
 reboot="Reboot"
@@ -11,10 +7,10 @@ logout="Logout"
 lock="Lock"
 options="$lock\n$logout\n$reboot\n$shutdown"
 
-selection="$(echo -e "$options" | $rofi_command -dmenu -i -hover-select )"
+selection="$(echo -e "$options" | rofi -dmenu -i )"
 
 case $selection in
-    $lock) betterlockscreen -l;;
+    $lock) dm-tool switch-to-greeter;;
     $logout) i3-msg exit;;
     $reboot) systemctl reboot;;
     $shutdown) systemctl poweroff;;
