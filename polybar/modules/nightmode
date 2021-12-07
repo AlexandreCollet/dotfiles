@@ -1,0 +1,4 @@
+[module/nightmode]
+type = custom/script
+exec = bash ~/dotfiles/polybar/scripts/nightmode.sh status_icon 2> /tmp/err_nightmode_toggle.txt
+click-left = bash ~/dotfiles/polybar/scripts/nightmode.sh toggle 2> /tmp/err_nightmode_toggle.txt

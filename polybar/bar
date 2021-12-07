@@ -26,7 +26,7 @@ font-2 = Font Awesome 5 Brands:size=9
 
 modules-left = i3
 modules-center = spotify_song spotify_previous spotify_playpause spotify_next
-modules-right = volume_pulse backlight battery date powermenu
+modules-right = volume_pulse nightmode backlight battery date powermenu
 
 tray-position = none
 tray-padding = 1
