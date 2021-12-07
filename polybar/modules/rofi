@@ -1,0 +1,5 @@
+[module/rofi]
+type = custom/text
+content = 
+
+click-left = bash ~/dotfiles/rofi/launcher.sh 2> /tmp/err_rofi.txt
