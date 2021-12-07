@@ -8,6 +8,8 @@ label-volume-foreground = ${root.foreground}
 label-muted =  0%
 label-muted-foreground = ${root.foreground}
 
+click-right = pavucontrol
+click-middle = pavucontrol
 
 [module/volume_alsa]
 type = internal/alsa
