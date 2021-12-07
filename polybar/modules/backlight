@@ -5,4 +5,4 @@ card = intel_backlight
 
 enable-scroll = true
 
-format =  <label>
+format =  <label>
