@@ -215,6 +215,7 @@ mode "workspace" {
 
 exec --no-startup-id autorandr --change --default default
 exec_always --no-startup-id sh ~/dotfiles/polybar/run.sh default
+exec_always --no-startup-id fusuma
 
 ##########
 # CUSTOM #

@@ -5,6 +5,8 @@ mkdir -p $HOME/.config/
 # x11
 ln -sfn $PWD/x11/xresources $HOME/.Xresources
 
+# Fusuma
+ln -sfn $PWD/fusuma/ $HOME/.config/
 # I3
 ln -sfn $PWD/i3/ $HOME/.config/
 
