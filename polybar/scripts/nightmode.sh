@@ -79,7 +79,7 @@ get_status_icon() {
 
 exec_status() {
     status=$(get_status)
-    echo "Status is $status"
+    echo "Nightmode is $status"
 }
 
 exec_status_icon() {
