@@ -2,6 +2,10 @@
 type = custom/text
 content = "  •  "
 
+[module/separator-blank1]
+type = custom/text
+content = " "
+
 [module/separator-blank2]
 type = custom/text
 content = "  "
