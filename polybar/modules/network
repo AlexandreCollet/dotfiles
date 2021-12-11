@@ -1,0 +1,23 @@
+[module/network-wired]
+type = internal/network
+interface = eth1
+
+[module/network-wireless]
+type = internal/network
+interface = wlp2s0
+
+format-connected = %{A1:alacritty --command nmtui:}<label-connected>%{A}
+format-disconnected = %{A1:alacritty --command nmtui:}<label-disconnected>%{A}
+format-packetloss = %{A1:alacritty --command nmtui:}<animation-packetloss>%{A}
+
+label-connected = 
+label-connected-foreground = ${colors.foreground}
+
+label-disconnected = 
+label-disconnected-foreground = ${colors.alert}
+
+animation-packetloss-framerate = 250
+animation-packetloss-0 = 
+animation-packetloss-0-foreground = ${colors.alert}
+animation-packetloss-1 = 
+animation-packetloss-1-foreground = ${colors.foreground}
