@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export POLYBAR_SHELL=zsh
+
 # Terminate already running bar instances
 killall -q polybar
 
