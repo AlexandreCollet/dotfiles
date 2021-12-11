@@ -1,0 +1,4 @@
+[module/bluetooth]
+type = custom/text
+content = 
+click-left = blueman-manager

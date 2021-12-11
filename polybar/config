@@ -27,6 +27,7 @@ include-file = ~/dotfiles/polybar/colors
 
 include-file = ~/dotfiles/polybar/modules/backlight
 include-file = ~/dotfiles/polybar/modules/battery
+include-file = ~/dotfiles/polybar/modules/bluetooth
 include-file = ~/dotfiles/polybar/modules/date
 include-file = ~/dotfiles/polybar/modules/i3
 include-file = ~/dotfiles/polybar/modules/network
