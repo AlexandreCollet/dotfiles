@@ -21,6 +21,7 @@ ln -sfn $PWD/rofi/applications/* $HOME/.local/share/applications/
 # Terminal
 ln -sfn $PWD/alacritty/ $HOME/.config/
 ln -sfn $PWD/zsh/zshrc $HOME/.zshrc
+ln -sfn $PWD/zsh/zshenv $HOME/.zshenv
 
 # Autorandr
 ln -sfn $PWD/autorandr $HOME/.config/
