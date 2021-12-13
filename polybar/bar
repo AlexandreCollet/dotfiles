@@ -26,7 +26,7 @@ font-2 = Font Awesome 5 Brands:size=10;-1
 
 modules-left = rofi separator-i3 i3
 modules-center = spotify_song separator-spotify spotify_previous separator-blank2 spotify_playpause separator-blank2 spotify_next
-modules-right = nightmode separator-blank1 bluetooth separator-blank1 network-wired network-wireless separator backlight separator volume_pulse separator battery separator date separator powermenu
+modules-right = nightmode separator-blank1 bluetooth separator-blank1 network-wired separator-blank1 network-wireless separator backlight separator volume_pulse separator battery separator date separator powermenu
 
 tray-position = none
 tray-padding = 1
