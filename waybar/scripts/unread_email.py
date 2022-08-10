@@ -24,9 +24,6 @@ def count_imap(imap_account):
     return len(client.search(None, 'UNSEEN')[1][0].split())
 
 for account in accounts:
-    if account == "DEFAULT":
-        continue
-
     current_account = accounts[account]
 
     count = count_imap(current_account)
@@ -34,9 +31,6 @@ for account in accounts:
         has_unread = True
         break
 
-icon = accounts["DEFAULT"]["icon"]
-color_default = accounts["DEFAULT"]["colorDefault"]
-color_unread = accounts["DEFAULT"]["colorUnread"]
-color = color_unread if has_unread else color_default
+css_class = "active" if has_unread else "inactive"
 
-print(f"%{{F#{color}}}{icon}%{{F-}}")
+print(f'{{"class": "{css_class}"}}')

@@ -11,7 +11,6 @@
     "editor.snippetSuggestions": "top",
     "editor.fontWeight": "bold",
     "window.zoomLevel": 0,
-    "typescript.validate.enable": false,
     "javascript.validate.enable": false,
     "javascript.updateImportsOnFileMove.enabled": "never",
     "extensions.ignoreRecommendations": true,
@@ -109,4 +108,7 @@
     "window.titleBarStyle": "custom",
     "window.title": "",
     "workbench.startupEditor": "none",
+    "html.format.enable": false,
+    "editor.guides.indentation": true,
+    "csv-preview.separator": ";"
 }

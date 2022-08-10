@@ -1,0 +1,153 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 25,
+    // Choose the order of the modules
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+    ],
+    "modules-center": [
+        "custom/spotify_song",
+        "custom/spotify_previous",
+        "custom/spotify_playpause",
+        "custom/spotify_next",
+    ],
+    "modules-right": [
+        "custom/email",
+        "custom/nightmode",
+        "custom/bluetooth",
+        "network",
+        "custom/dot",
+        "backlight",
+        "custom/dot",
+        "pulseaudio",
+        "custom/dot",
+        "battery",
+        "custom/dot",
+        "clock",
+        "custom/powermenu",
+    ],
+    "sway/workspaces": {
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+        }
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": [""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-linked": "",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "alacritty --command nmtui"
+    },
+    "pulseaudio": {
+        "scroll-step": 0.5,
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "{icon}  {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/bluetooth": {
+        "format": "",
+        "on-click": "blueman-manager",
+    },
+    "custom/powermenu": {
+        "format": "",
+        "on-click": "bash ~/dotfiles/rofi/powermenu.sh",
+    },
+    "custom/nightmode": {
+        "exec": "bash ~/dotfiles/waybar/scripts/nightmode.sh status_icon 2> /tmp/err_nightmode_toggle.txt",
+        "on-click": "bash ~/dotfiles/waybar/scripts/nightmode.sh toggle 2> /tmp/err_nightmode_toggle.txt",
+        "interval": 1
+    },
+    "custom/spotify_song": {
+        "exec-if": "pgrep spotify",
+        "exec": "playerctl --player=\"spotify\" metadata --format \"{{ artist }}: {{ title }}\"",
+        "interval": 1,
+        "on-click": "swaymsg '[class=\"Spotify\"] focus'"
+    },
+    "custom/spotify_previous": {
+        "exec-if": "pgrep spotify",
+        "exec": "echo \"\"",
+        "interval": 1,
+        "on-click": "playerctl --player=\"spotify\" previous"
+    },
+    "custom/spotify_next": {
+        "exec-if": "pgrep spotify",
+        "exec": "echo \"\"",
+        "interval": 1,
+        "on-click": "playerctl --player=\"spotify\" next"
+    },
+    "custom/spotify_playpause": {
+        "exec-if": "pgrep spotify",
+        "exec": "playerctl --player=\"spotify\" status | grep -q \"Playing\" && echo \"\" || echo \"\"",
+        "interval": 1,
+        "on-click": "playerctl --player=\"spotify\" play-pause"
+    },
+    "custom/email": {
+        "interval": 60,
+        "exec": "python3 ~/dotfiles/waybar/scripts/unread_email.py 2> /tmp/err_unread_email.txt",
+        "format": " {}",
+        "on-click": "thunderbird",
+        "return-type": "json"
+    },
+    "custom/dot": {
+        "format": "•"
+    }
+}
+

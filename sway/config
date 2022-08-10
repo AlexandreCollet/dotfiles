@@ -1,0 +1,221 @@
+set $mod Mod4
+set $gaps 10
+
+#########
+# INPUT #
+#########
+
+input * xkb_layout fr
+input * xkb_numlock enable
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+}
+
+##########
+# OUTPUT #
+##########
+
+output * bg #000000 solid_color
+
+########
+# IDLE #
+########
+
+#
+# Example configuration:
+#
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+
+##########
+# ASSIGN #
+##########
+
+assign [class="firefox"] 1
+assign [class="Google-chrome"] 1
+assign [class="Code"] 2
+for_window [app_id="Alacritty"] move to workspace 3
+assign [class="Postman"] 4
+assign [class="Thunderbird"] 5
+for_window [class="Spotify"] move to workspace 6
+
+
+#############
+# SHORTCUTS #
+#############
+
+floating_modifier $mod normal
+
+bindsym $mod+space exec alacritty
+bindsym $mod+l exec swaylock --config ~/dotfiles/swaylock/config
+bindsym $mod+Escape kill
+bindcode 49 exec bash ~/dotfiles/rofi/launcher.sh
+
+# Enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# Active modes
+bindsym $mod+r mode "resize"
+bindsym $mod+w mode "workspace"
+
+# Reload the configuration file
+bindsym $mod+Shift+r reload
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# cycle across workspaces
+bindsym $mod+Ctrl+Left workspace prev_on_output
+bindsym $mod+Ctrl+Right workspace next_on_output
+
+# Switch to workspace
+bindsym $mod+ampersand workspace number 1
+bindsym $mod+eacute workspace number 2
+bindsym $mod+quotedbl workspace number 3
+bindsym $mod+apostrophe workspace number 4
+bindsym $mod+parenleft workspace number 5
+bindsym $mod+minus workspace number 6
+bindsym $mod+egrave workspace number 7
+bindsym $mod+underscore workspace number 8
+
+# Move focused container to workspace
+bindsym $mod+Shift+ampersand move container to workspace number 1
+bindsym $mod+Shift+eacute move container to workspace number 2
+bindsym $mod+Shift+quotedbl move container to workspace number 3
+bindsym $mod+Shift+apostrophe move container to workspace number 4
+bindsym $mod+Shift+parenleft move container to workspace number 5
+bindsym $mod+Shift+minus move container to workspace number 6
+bindsym $mod+Shift+egrave move container to workspace number 7
+bindsym $mod+Shift+underscore move container to workspace number 8
+
+# split in horizontal / vertical orientation
+bindsym $mod+h splith
+bindsym $mod+v splitv
+
+# toggle tiling / floating
+bindsym $mod+Shift+f floating toggle
+
+# Exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+# Media keys
+bindcode 121 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindcode 122 exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindcode 123 exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindcode 172 exec playerctl play-pause
+bindcode 171 exec playerctl next
+bindcode 173 exec playerctl previous
+
+# Screenshot
+bindcode 107 exec shotman area
+bindcode $mod+107 exec shotman window
+
+# Brightness keys
+bindcode 232 exec brightnessctl set 5%-
+bindcode 233 exec brightnessctl set +5%
+
+
+##############
+# SCRATCHPAD #
+##############
+
+# Move the currently focused window to the scratchpad
+bindsym $mod+Shift+s move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+s scratchpad show
+
+###############
+# MODE RESIZE #
+###############
+
+mode "resize" {
+    bindsym Left resize shrink width 5px
+    bindsym Down resize grow height 5px
+    bindsym Up resize shrink height 5px
+    bindsym Right resize grow width 5px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+##################
+# MODE WORKSPACE #
+##################
+
+mode "workspace" {
+    bindsym Left move workspace to output left
+    bindsym Down move workspace to output down
+    bindsym Up move workspace to output up
+    bindsym Right move workspace to output right
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+#######
+# BAR #
+#######
+
+bar {
+    swaybar_command waybar
+}
+
+########
+# EXEC #
+########
+
+#exec --no-startup-id autorandr --change --default default
+# exec_always --no-startup-id fusuma
+
+########
+# MISC #
+########
+
+set $white #ffffff
+set $black #000000
+set $red #e06c75
+
+# class                 border  backgr. text    indicator child_border
+client.focused          $white  $black  $white  $black    $white
+client.focused_inactive $black  $black  $white  $black    $black
+client.unfocused        $black  $black  $white  $black    $black
+client.urgent           $red    $black  $white  $black    $red
+client.placeholder      $black  $black  $white  $black    $black
+client.background       $black
+
+gaps inner $gaps
+gaps outer -$gaps
+#smart_gaps on
+smart_borders on
+
+for_window [class="^.*"] border pixel 2
+default_border pixel 2
+
+
+###########
+# INCLUDE #
+###########
+
+include /etc/sway/config.d/*

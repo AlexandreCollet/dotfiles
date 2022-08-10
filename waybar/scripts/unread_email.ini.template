@@ -1,0 +1,9 @@
+#Configuration example for email accounts
+
+[DEFAULT]
+protocol=IMAP
+host=imap.domain.com
+port=993
+useSSL=true
+login=my-email
+password=my-password

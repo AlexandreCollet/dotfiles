@@ -1,5 +1,3 @@
-@theme "theme"
-
 configuration {
 
   /* Highlight an entry under the mouse pointer */
@@ -15,3 +13,5 @@ configuration {
   me-accept-entry: [ MousePrimary, MouseSecondary, MouseDPrimary ];
 
 }
+
+@theme "theme"
