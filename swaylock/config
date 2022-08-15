@@ -1,5 +1,5 @@
 font=DejaVuSans
-image=/usr/share/backgrounds/bg.jpg
+image=~/dotfiles/bg.jpg
 fade-in=0.2
 
 ignore-empty-password
