@@ -25,7 +25,6 @@
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "workbench.sideBar.location": "left",
     "workbench.colorTheme": "Default Dark+",
-    "editor.renderIndentGuides": true,
     "workbench.colorCustomizations": {
         "notifications.background": "#000000",
         "notifications.foreground": "#abb2bf",
